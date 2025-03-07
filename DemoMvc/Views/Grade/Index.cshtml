@@ -1,0 +1,21 @@
+@model DemoMVC.Models.GradeModel
+
+<h2>Tính điểm môn học</h2>
+
+<form method="post">
+    <label>Điểm giữa kỳ (A):</label>
+    <input type="number" step="0.1" name="A" required />
+
+    <label>Điểm chuyên cần (B):</label>
+    <input type="number" step="0.1" name="B" required />
+
+    <label>Điểm cuối kỳ (C):</label>
+    <input type="number" step="0.1" name="C" required />
+
+    <button type="submit">Tính điểm</button>
+</form>
+
+@if (ViewBag.FinalGrade != null)
+{
+    <h3>Điểm tổng kết: @ViewBag.FinalGrade</h3>
+}
